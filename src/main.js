@@ -20,3 +20,20 @@ const viewer = new Viewer({
   defaultPitch: 0,
   defaultZoomLvl: 0,
 });
+
+const gyroscope = viewer.getPlugin(GyroscopePlugin);
+
+async function enableGyroscope() {
+  try {
+    if (await gyroscope.isSupported()) {
+      await gyroscope.start();
+    }
+  } catch (error) {
+    console.info(
+      'Gyroscope could not start automatically. Tap the gyroscope button to enable it.',
+      error,
+    );
+  }
+}
+
+enableGyroscope();
