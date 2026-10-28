@@ -7,7 +7,7 @@ import './style.css';
 const viewer = new Viewer({
   container: document.querySelector('#viewer'),
 
-  panorama: `${import.meta.env.BASE_URL}drafttaxistand.jpg`,
+  panorama: `${import.meta.env.BASE_URL}Panoramic Bugis Taxi Stand Singapore.png`,
 
   navbar: ['gyroscope'],
 
